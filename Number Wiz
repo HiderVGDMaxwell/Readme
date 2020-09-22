@@ -1,0 +1,51 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HelloWorld : MonoBehaviour
+{
+    int maxGuess = 1001;                                       //1001, not 1000 b/c bug
+    int minGuess = 1;
+    int guess = 500;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("Greetings! Welcome to number wizard");                       //Intro
+        Debug.Log("Choose a number in your head and don't forget it");        //Instructions
+        Debug.Log("The highest number you can pick is:" + (maxGuess -1));    //Instructions, subtract 1 b/c bug
+        Debug.Log("The lowest number you can pick is:" + minGuess);         //Instructions
+        Debug.Log("Ok...my first guess is..." + guess);                    //First guess
+        Debug.Log("Press down if your number is lower ");                 //Instructions
+        Debug.Log("Press up if your number is higher");                   //Instructions
+        Debug.Log("Press enter if I guessed your number");               //Instructions
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+      if (Input.GetKeyDown("return"))                           //Looks for return (enter) to be pressed
+        {
+            print("LET'S GO, I GOT IT!");                     //Responds with this when the game has guessed correctly and you click return
+        }
+      if
+
+         (Input.GetKeyDown("up"))                            //Looks for UP key being pressed
+        {
+            minGuess = guess;
+            guess = (maxGuess + minGuess) / 2;              //How the numbers get averaged
+            print("Gotcha, higher....I'm gonna guess..." + guess);      //Responds with this when UP key is pressed to go higher 
+
+
+        }
+
+      if (Input.GetKeyDown("down"))
+        {
+            maxGuess = guess;
+            guess = (maxGuess + minGuess) / 2;
+            print("Hmmm....Lower.....I bet it's" + guess);
+            print("You pressed down");
+        }
+    }
+}
