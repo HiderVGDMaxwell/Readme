@@ -43,9 +43,9 @@ public class HelloWorld : MonoBehaviour
       if (Input.GetKeyDown("down"))
         {
             maxGuess = guess;
-            guess = (maxGuess + minGuess) / 2;
-            print("Hmmm....Lower.....I bet it's" + guess);
-            print("You pressed down");
+            guess = (maxGuess + minGuess) / 2;                 //Guess calculation
+            print("Hmmm....Lower.....I bet it's" + guess);    //Game says this when guess is incorrect and is lower
+            print("You pressed down");                      //Game will tell you what you clicked, in this case DOWN
         }
     }
 }
