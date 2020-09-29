@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Chooseyourownadventure : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("You have awoke on the side of a street hungrier than you have ever been");
+        Debug.Log("The clothes you are currently wearing are covered in dirt and seem to have this single claw pattern ripped in the center of the shirt");
+        Debug.Log("After bringing yourself up from the ground you see a man hunched over, his presense reminds you that you have family somewhere...");
+        Debug.Log("What's your next move? press F to go find your family or press M to approached the crippled looking man");
+    }
+
+    // Update is called once per frame
+    void Update()
+        
+    {
+        if (Input.GetKeyDown("f"))
+        {
+
+        }
+
+
+    }
+}
