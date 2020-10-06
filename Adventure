@@ -11,7 +11,7 @@ public class Chooseyourownadventure : MonoBehaviour
         Debug.Log("The clothes you are currently wearing are covered in dirt and seem to have this single claw pattern ripped in the center of the shirt");
         Debug.Log("After bringing yourself up from the ground you see a man hunched over, his presense reminds you that you have family somewhere...");
         Debug.Log("What's your next move? press F to go find your family or press M to approached the crippled looking man");
-    }
+    }                                                   //DONE
 
     // Update is called once per frame
     void Update()
@@ -19,9 +19,47 @@ public class Chooseyourownadventure : MonoBehaviour
     {
         if (Input.GetKeyDown("f"))
         {
+            Debug.Log("You decide to go search for your family, as you make your way through the streets you see a large group of people");
+            Debug.Log("These people are moving very slow....too slow");
+            Debug.Log("Do you press G approach the group and see where they are going or do you press A to go alone in search of your family");
+      
 
         }
 
+        if (Input.GetKeyDown("m"))
+        {
+            Debug.Log("You walk up to the man just in case he is in need of help");
+            Debug.Log("He's making some type of noise, almost like a groan but much more drawn out");
+            Debug.Log("You tap the man on the back and as he turns he has flesh hanging from his mouth");              //DONE
+            Debug.Log("Is it a cannibal...NO, IT'S A ZOMBIE");
+            Debug.Log("Do you click P to punch it and attempt to fight, or do you click R and run away");
 
-    }
+        }
+        if (Input.GetKeyDown("R"))
+        {
+            Debug.Log("You are absolutely terrified by the sight of this mans face and you turn and start to bolt");
+            Debug.Log("As you get a good distance away you turn and look if he has gained any ground on you");
+            Debug.Log("Suprisingly he is still close to where he started, he must be very slow, you should remember that");
+            Debug.Log("Coming around the corner about 6 blocks down is a large group of people moving very slowly, they must also be zombies");
+            Debug.Log("You don't want to get caught in this horde so you can press S and hide at the shooting range or press H and head into the hospital");
+        }
+        if (Input.GetKeyDown("p"))
+        {
+            Debug.Log("As the you begin to notice that it's a zombie your first instinct is to send a haymaker into its chest");
+            Debug.Log("When your fist lands the zombie seems to be uneffected and grabs onto your forearm");
+            Debug.Log("You wrestle to escape as the zombie digs its nails into you and tear your skin from your arm");
+            Debug.Log("The zombie takes a layer of skin off with a quick bite as you finally get it off of you");
+            Debug.Log("When you quickly get away while holding your arm you realize you have to make a choice to stop the infection");
+            Debug.Log("You can either press D to die and give up now or press C to cut off your arm");
+         
+        }
+        if (Input.GetKeyDown("D"))
+        {
+
+        }
+       
+      
+        
+    }  
+   
 }
