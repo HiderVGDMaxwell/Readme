@@ -53,8 +53,13 @@ public class Chooseyourownadventure : MonoBehaviour
             Debug.Log("You can either press D to die and give up now or press C to cut off your arm");
          
         }
-        if (Input.GetKeyDown("D"))
+        if (Input.GetKeyDown("S"))
+
         {
+            Debug.Log("The shooting range has to be safe, maybe it has weapons for me");
+            Debug.Log("The windows seem to be barricaded with little slits in them, as your turn away a barrel of a gun sticks out of one of these holes");
+            Debug.Log("A man speaks through the window in a low tone of voice, he wants to know what your doing here");
+            Debug.Log("Press B to ask to borrow a weapon or press T to threaten him and steal his guns");
 
         }
        
