@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 using UnityEngine;
-
 public class Chooseyourownadventure : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -9,62 +10,111 @@ public class Chooseyourownadventure : MonoBehaviour
     {
         Debug.Log("You have awoke on the side of a street hungrier than you have ever been");
         Debug.Log("The clothes you are currently wearing are covered in dirt and seem to have this single claw pattern ripped in the center of the shirt");
-        Debug.Log("After bringing yourself up from the ground you see a man hunched over, his presense reminds you that you have family somewhere...");
+        Debug.Log("After bringing yourself up from the ground you see a man hunched over, his presense reminds you that you have family somewhere...");           //DONE
         Debug.Log("What's your next move? press F to go find your family or press M to approached the crippled looking man");
-    }                                                   //DONE
+    }
+}                                                  
+// Update is called once per frame
+void Update()
 
-    // Update is called once per frame
-    void Update()
-        
+{
+    if (Input.GetKeyDown("f"))
     {
-        if (Input.GetKeyDown("f"))
-        {
-            Debug.Log("You decide to go search for your family, as you make your way through the streets you see a large group of people");
-            Debug.Log("These people are moving very slow....too slow");
-            Debug.Log("Do you press G approach the group and see where they are going or do you press A to go alone in search of your family");
-      
+        Debug.Log("You decide to go search for your family, as you make your way through the streets you see a large group of people");        
+        Debug.Log("These people are moving very slow....too slow");
+        Debug.Log("Do you press G approach the group and see where they are going or do you press A to go alone in search of your family");
 
-        }
 
-        if (Input.GetKeyDown("m"))
-        {
-            Debug.Log("You walk up to the man just in case he is in need of help");
-            Debug.Log("He's making some type of noise, almost like a groan but much more drawn out");
-            Debug.Log("You tap the man on the back and as he turns he has flesh hanging from his mouth");              //DONE
-            Debug.Log("Is it a cannibal...NO, IT'S A ZOMBIE");
-            Debug.Log("Do you click P to punch it and attempt to fight, or do you click R and run away");
+    }
 
-        }
-        if (Input.GetKeyDown("R"))
-        {
-            Debug.Log("You are absolutely terrified by the sight of this mans face and you turn and start to bolt");
-            Debug.Log("As you get a good distance away you turn and look if he has gained any ground on you");
-            Debug.Log("Suprisingly he is still close to where he started, he must be very slow, you should remember that");
-            Debug.Log("Coming around the corner about 6 blocks down is a large group of people moving very slowly, they must also be zombies");
-            Debug.Log("You don't want to get caught in this horde so you can press S and hide at the shooting range or press H and head into the hospital");
-        }
-        if (Input.GetKeyDown("p"))
-        {
-            Debug.Log("As the you begin to notice that it's a zombie your first instinct is to send a haymaker into its chest");
-            Debug.Log("When your fist lands the zombie seems to be uneffected and grabs onto your forearm");
-            Debug.Log("You wrestle to escape as the zombie digs its nails into you and tear your skin from your arm");
-            Debug.Log("The zombie takes a layer of skin off with a quick bite as you finally get it off of you");
-            Debug.Log("When you quickly get away while holding your arm you realize you have to make a choice to stop the infection");
-            Debug.Log("You can either press D to die and give up now or press C to cut off your arm");
-         
-        }
-        if (Input.GetKeyDown("S"))
+    if (Input.GetKeyDown("M"))
+    {
+        Debug.Log("You walk up to the man just in case he is in need of help");
+        Debug.Log("He's making some type of noise, almost like a groan but much more drawn out");
+        Debug.Log("You tap the man on the back and as he turns he has flesh hanging from his mouth");              //DONE
+        Debug.Log("Is it a cannibal...NO, IT'S A ZOMBIE");
+        Debug.Log("Do you click P to punch it and attempt to fight, or do you click R and run away");
 
-        {
-            Debug.Log("The shooting range has to be safe, maybe it has weapons for me");
-            Debug.Log("The windows seem to be barricaded with little slits in them, as your turn away a barrel of a gun sticks out of one of these holes");
-            Debug.Log("A man speaks through the window in a low tone of voice, he wants to know what your doing here");
-            Debug.Log("Press B to ask to borrow a weapon or press T to threaten him and steal his guns");
+    }
+    if (Input.GetKeyDown("R"))
+    {
+        Debug.Log("You are absolutely terrified by the sight of this mans face and you turn and start to bolt");
+        Debug.Log("As you get a good distance away you turn and look if he has gained any ground on you");
+        Debug.Log("Suprisingly he is still close to where he started, he must be very slow, you should remember that");
+        Debug.Log("Coming around the corner about 6 blocks down is a large group of people moving very slowly, they must also be zombies");
+        Debug.Log("You don't want to get caught in this horde so you can press S and hide at the shooting range or press H and head into the hospital");
+    }
+    if (Input.GetKeyDown("P"))
+    {
+        Debug.Log("As the you begin to notice that it's a zombie your first instinct is to send a haymaker into its chest");
+        Debug.Log("When your fist lands the zombie seems to be uneffected and grabs onto your forearm");
+        Debug.Log("You wrestle to escape as the zombie digs its nails into you and tear your skin from your arm");         //DONE
+        Debug.Log("The zombie takes a layer of skin off with a quick bite as you finally get it off of you");
+        Debug.Log("When you quickly get away while holding your arm you realize you have to make a choice to stop the infection");
+        Debug.Log("You can either press D to die and give up now or press C to cut off your arm");
 
-        }
-       
-      
+    }
+    if (Input.GetKeyDown("D"))
+    {
+        Debug.Log("The stress of the situation is too much for you")
+        Debug.Log("You fall to your knees and lay down in the street")     //DONE
+        Debug.Log("YOU HAVE DIED")
+    }
+    if (Input.GetKeyDown(C))
+    {
+        Debug.Log("Your arm is basically hanging from a small amount of bone")
+        Debug.Log("You've seen it in the movies, to stop the infection you have to do something horrific") 
+        Debug.Log("As you remove your belt you see a pole nearby that you can tie your arm to")
+        Debug.Log("The arm that is hanging is so weak that you take one swift chop with your opposite hand and it snaps off")           //DONE
+        Debug.Log("You check what you have on you and you have no medical supplies to stop the blood")
+        Debug.Log("Due to the loss of blood you've fallen onto the ground and hit your head")
+        Debug.Log("YOU HAVE DIED")
+
+
+
+    }
+    if (Input.GetKeyDown("S"))
+
+    {
+        Debug.Log("The shooting range has to be safe, maybe it has weapons for me");
+        Debug.Log("The windows seem to be barricaded with little slits in them, as your turn away a barrel of a gun sticks out of one of these holes");
+        Debug.Log("A man speaks through the window in a low tone of voice, he wants to know what your doing here");
+        Debug.Log("Press B to ask to borrow a weapon or press T to threaten him and steal his guns");
+    }   
+    if (Input.GetKeyDown("G"))
+    {
+        Debug.Log("As you approach the group something seems off")
+        Debug.Log("There are bodies on the ground rising up without all of their limbs!")
+        Debug.Log("The horde makes a turn right towards you, you must make an escape")
+        Debug.Log("Do you push DOWN and go into the sewers or push UP and climb the ladder onto the roof")
+    }
+    if (Input.GetKeyDown("DOWN")
+    {
         
-    }  
-   
+        Debug.Log("You slide the manhole cover off to the side and drop down and grab the ladder")
+        Debug.Log("The ladder is very weak and you dont know if it will hold you")
+        Debug.Log("As you step on the top part it snaps, you proceed to fall down the dim lit sewer entrance")
+        Debug.Log("Your life flashes before your eyes as you approach the ground and land on your head")
+        Debug.Log("YOU HAVE DIED")
+    }
+{   if (Input.GetKeyDown("UP")
+    {
+        Debug.Log("You make a break for the alley way where you see a ladder that leads onto a roof")
+        Debug.Log("The climb is long but as you make your about halfway up you can see the horde walking down the road past the alley way that you are at")
+        Debug.Log("When you get to the top you hear people talking to each other")
+        Debug.Log("You can see a couple police officers with guns and they are guarding civilians")
+        Debug.Log("They call out to you and ask if you have been infected")
+        Debug.Log("After informing then of your name and status they lead you to a group at the corner of the building")
+        Debug.Log("They seem very familier...could it be?.....IT'S YOUR FAMILY")
+        Debug.Log("YOU HAVE WON THE GAME")
+    }
+      
+    
+       
+    
+
+
+
+
+
 }
