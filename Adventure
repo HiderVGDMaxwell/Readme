@@ -22,7 +22,7 @@ void Update()
     {
         Debug.Log("You decide to go search for your family, as you make your way through the streets you see a large group of people");        
         Debug.Log("These people are moving very slow....too slow");
-        Debug.Log("Do you press G approach the group and see where they are going or do you press A to go alone in search of your family");
+        Debug.Log("Do you press G approach the group and see where they are going or do you press A to go alone in search of your family");        //DONE
 
 
     }
@@ -40,7 +40,7 @@ void Update()
     {
         Debug.Log("You are absolutely terrified by the sight of this mans face and you turn and start to bolt");
         Debug.Log("As you get a good distance away you turn and look if he has gained any ground on you");
-        Debug.Log("Suprisingly he is still close to where he started, he must be very slow, you should remember that");
+        Debug.Log("Suprisingly he is still close to where he started, he must be very slow, you should remember that");               //DONE
         Debug.Log("Coming around the corner about 6 blocks down is a large group of people moving very slowly, they must also be zombies");
         Debug.Log("You don't want to get caught in this horde so you can press S and hide at the shooting range or press H and head into the hospital");
     }
@@ -58,7 +58,7 @@ void Update()
     {
         Debug.Log("The stress of the situation is too much for you")
         Debug.Log("You fall to your knees and lay down in the street")     //DONE
-        Debug.Log("YOU HAVE DIED")
+        Debug.Log("YOU HAVE DIED");
     }
     if (Input.GetKeyDown(C))
     {
@@ -68,7 +68,7 @@ void Update()
         Debug.Log("The arm that is hanging is so weak that you take one swift chop with your opposite hand and it snaps off")           //DONE
         Debug.Log("You check what you have on you and you have no medical supplies to stop the blood")
         Debug.Log("Due to the loss of blood you've fallen onto the ground and hit your head")
-        Debug.Log("YOU HAVE DIED")
+        Debug.Log("YOU HAVE DIED");
 
 
 
@@ -84,31 +84,70 @@ void Update()
     if (Input.GetKeyDown("G"))
     {
         Debug.Log("As you approach the group something seems off")
-        Debug.Log("There are bodies on the ground rising up without all of their limbs!")
+        Debug.Log("There are bodies on the ground rising up without all of their limbs!")                        //DONE
         Debug.Log("The horde makes a turn right towards you, you must make an escape")
-        Debug.Log("Do you push DOWN and go into the sewers or push UP and climb the ladder onto the roof")
+        Debug.Log("Do you push DOWN and go into the sewers or push UP and climb the ladder onto the roof");
     }
     if (Input.GetKeyDown("DOWN")
     {
         
         Debug.Log("You slide the manhole cover off to the side and drop down and grab the ladder")
         Debug.Log("The ladder is very weak and you dont know if it will hold you")
-        Debug.Log("As you step on the top part it snaps, you proceed to fall down the dim lit sewer entrance")
+        Debug.Log("As you step on the top part it snaps, you proceed to fall down the dim lit sewer entrance")            //DONE
         Debug.Log("Your life flashes before your eyes as you approach the ground and land on your head")
-        Debug.Log("YOU HAVE DIED")
+        Debug.Log("YOU HAVE DIED");
     }
-{   if (Input.GetKeyDown("UP")
+    if (Input.GetKeyDown("UP")
     {
         Debug.Log("You make a break for the alley way where you see a ladder that leads onto a roof")
         Debug.Log("The climb is long but as you make your about halfway up you can see the horde walking down the road past the alley way that you are at")
         Debug.Log("When you get to the top you hear people talking to each other")
-        Debug.Log("You can see a couple police officers with guns and they are guarding civilians")
+        Debug.Log("You can see a couple police officers with guns and they are guarding civilians")                          //DONE
         Debug.Log("They call out to you and ask if you have been infected")
         Debug.Log("After informing then of your name and status they lead you to a group at the corner of the building")
         Debug.Log("They seem very familier...could it be?.....IT'S YOUR FAMILY")
-        Debug.Log("YOU HAVE WON THE GAME")
+        Debug.Log("YOU HAVE WON THE GAME");
     }
-      
+    if (Input.GetKeyDown("A"))
+    {
+        Debug.Log("When you go in search of your family you can here whispering")
+        Debug.Log("There is a house that has barricaded windows")
+        Debug.Log("You peek through the window and see a group of survivors")
+        Debug.Log("You knock on the door, call out your name, and they let you in")
+        Debug.Log("The person in charge is a relative of yours and he/she says that the rest of your family is safe")     //DONE
+        Debug.Log("Now you can stay with this group and attempt to survive in this new life")
+        Debug.Log("YOU WIN, you have found other humans and your family!");
+    }
+    if (Input.GetKeyDown("H"))
+    {
+        Debug.Log("The hospital seems to be wide open for you to just walk through")
+        Debug.Log("As you make your way through you see the light on the elevator, it's lit up")
+        Debug.Log("You decide to take the elevator and wait patiently as you make it to the top floor")        //DONE
+        Debug.Log("When you make it up the halls are lined with cabinets that have tons of medical supplies")
+        Debug.Log("From this moment moving forward you decide that you want to go around and save people from this virus")
+        Debug.Log("YOU HAVE COMPLETED THE GAME......FOR NOW.....")
+    }
+    if (Input.GetKeyDown("B")
+    {
+    Debug.Log("As you panic you tell the man you would just like a gun to defend yourself")
+    Debug.Log("He says normally he would just kill strangers but you seem trustable")
+    Debug.Log("He requests you back up as he slides a fully auto weapon out the door")
+    Debug.Log("This is the beginning of your journey to fight the virus")
+    Debug.Log("YOU HAVE COMPLETED YOUR JOURNEY....FOR NOW")
+    }
+    if (Input.GetKeyDown("T")
+    {
+    Debug.Log("You yell at the man and demand his weapons before you kill him")
+    Debug.Log("The man says nothing and slowly moves the barrel of his shotgun, points it at your head and blows your brains out")
+    Debug.Log("YOU HAVE DIED")
+    
+    
+    
+
+    
+    
+        
+       
     
        
     
