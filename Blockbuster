@@ -1,0 +1,187 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Level : MonoBehaviour
+{
+    [SerializeField] int breakableBlocks;
+
+
+    public void CountBreakableBlocks()
+    {
+        breakableBlocks++;
+    }
+    
+    public void DestroyBreakableBlocks()
+    {
+        breakableBlocks--;
+
+
+  
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Block : MonoBehaviour
+{
+    Level level;
+
+    private void Start()
+    {
+        level = FindObjectOfType<Level>();
+        level.CountBreakableBlocks();
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+
+        level.DestroyBreakableBlocks();
+        Destroy(gameObject); 
+    }
+}
+
+
+
+
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Ball : MonoBehaviour
+{
+
+    [SerializeField] Paddle paddle1;
+    [SerializeField] float xLaunchspd = 2f;
+    [SerializeField] float yLaunchspd = 15f;
+    [SerializeField] float randomFactor = 0.2f;
+
+
+    Vector2 paddleToBallVector;
+
+    bool hasStarted = false;
+    // Start is called before the first frame update
+    void Start()
+    {
+        paddleToBallVector = transform.position - paddle1.transform.position;
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!hasStarted)
+        {
+            LockBallToPaddle();
+            LaunchOnMouseClick();
+        }
+
+    }
+    private void LockBallToPaddle()
+    {
+        Vector2 paddlepos = new Vector2(paddle1.transform.position.x, paddle1.transform.position.y);
+
+        transform.position = paddlepos + paddleToBallVector;
+    }
+    private void LaunchOnMouseClick()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            hasStarted = true;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(xLaunchspd, yLaunchspd);
+        }
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Vector2 velocityTweak = new Vector2(Random.Range(0f, randomFactor), Random.Range(0f, randomFactor));
+        GetComponent<Rigidbody2D>().velocity += velocityTweak;
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Paddle : MonoBehaviour
+{
+    [SerializeField] float screenWidthInUnits = 13f;
+    [SerializeField] float xMin = -2f;
+    [SerializeField] float xMax = 10f;
+
+
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Debug.Log(Input.mousePosition);
+
+        float mousePosInUnits = Input.mousePosition.x / Screen.width * screenWidthInUnits;
+
+        Vector2 paddlePos = new Vector2(transform.position.x, transform. position.y);
+
+        paddlePos.x = Mathf.Clamp(mousePosInUnits, xMin, xMax);
+
+        transform.position = paddlePos; 
+
+
+
+    }
+}
